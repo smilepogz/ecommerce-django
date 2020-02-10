@@ -1,0 +1,34 @@
+
+
+{% extends 'clients/main.html' %}
+{% block content %}
+{% load static %}
+<div class="row">
+    <div class="col-sm-4">
+      {% for product in products %} 
+        <div class="card">
+
+          
+            <img class="card-img-top" src="{% static 'images/home.jpeg' %}" alt="Card image cap">
+            <!-- <i class="fa fa-trash"></i> -->
+            <div class="card-body">
+              
+              <!-- <h5 class="card-title">{{ product.products_name }} - {{ product.id }}</h5> -->
+               <h5 class="card-title">{{ product.products_name }}</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          
+              <a href="{% url 'product_detail' product.id %}" class="btn btn-primary" >Update</a>
+              <a href="{% url 'product_detail' product.id   %}" class="btn btn-primary" >Delete</a>
+              
+            </div>
+            
+           
+          </div>    
+      {% endfor %}
+    </div> 
+    
+    
+</div>
+
+  
+{% endblock %}

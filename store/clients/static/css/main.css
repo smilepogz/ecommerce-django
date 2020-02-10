@@ -1,0 +1,28 @@
+
+    body {
+        background-color:#54C4F7;
+    }
+
+     .row {
+         padding-top: 2rem;
+       padding-left: 5rem;
+         margin-left: auto;
+         margin-right: auto; 
+        }
+
+     .card {
+         height: 25rem;
+         width: 20rem;
+         text-align: center;
+     }
+     .card-img-top{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        margin-top: 1rem;  
+     }
+     .signup{
+        width: 20%;
+        margin: auto;
+     }

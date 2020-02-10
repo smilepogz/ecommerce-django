@@ -1,0 +1,18 @@
+
+{% extends 'clients/main.html' %}
+{% block content %}
+{% load static %}
+
+<!-- {{ product }}  -->
+
+
+<form method="post">
+    {% csrf_token %}
+    <br>
+    {{ form }}
+    
+    <input type="submit" value="Submit">
+</form>
+
+
+{% endblock %}
