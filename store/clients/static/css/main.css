@@ -11,8 +11,8 @@
         }
 
      .card {
-         height: 25rem;
-         width: 20rem;
+         height: 30rem;
+         width: 30rem;
          text-align: center;
      }
      .card-img-top{
@@ -26,3 +26,10 @@
         width: 20%;
         margin: auto;
      }
+     .card-img-top {
+         width: 200px;
+     }
+     .order_form{
+         padding-top: 5rem;
+     }
+   

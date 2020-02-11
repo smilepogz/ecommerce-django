@@ -1,0 +1,28 @@
+
+{% extends 'clients/main.html' %}
+{% block content %}
+{% load static %}
+<div class="order_form">
+    <form action="." method="POST" novalidate>
+        {% csrf_token %}
+     {% for form in OrderForm %}
+     
+        <div class="form-group">
+            <label for="exampleInputPassword1">{{ form.products_name.label }}</label>
+            {{ form.products_name }}
+            {{ form.products_name.errors }}
+        </div>
+        
+        {% endfor %}
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">{{ form.books.label }}</label>
+            {{ form.books }}
+        </div>
+        <input type="submit" name="Submit">
+    </form>
+   
+</div>
+
+
+{% endblock %}

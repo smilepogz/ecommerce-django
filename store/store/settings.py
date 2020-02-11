@@ -43,6 +43,11 @@ INSTALLED_APPS = [
     
 ]
 
+# FILE_UPLOAD_HANDLER = [
+#     "django.core.files.uploadhandler.MemoryFileUploadHandler",
+#     "django.core.files.uploadhandler.TemporaryFileUploadHandler"
+# ]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -66,6 +71,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -123,7 +129,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/images/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static-files')
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static-files')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
